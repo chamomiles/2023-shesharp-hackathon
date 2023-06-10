@@ -1,4 +1,4 @@
-# An HTML, CSS and JS frontend website
+# Pinwheel: Netherlands Software Job Finder
 
 My little web app that returns current open jobs in the Netherlands based on chosen filters.
 
