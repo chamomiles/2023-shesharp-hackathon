@@ -2,7 +2,7 @@ document.querySelector('button').addEventListener('click', showMeData);
 
 async function showMeData() {
     const getData = async () => {
-        const response = await fetch('https://shesharpnl.github.io/hackathon-2023.sourcestack-data/assets/junior-nl.json');
+        const response = await fetch('https://raw.githubusercontent.com/chamomiles/2023-shesharp-hackathon/main/assets/data.json');
         const data = await response.json();
         console.log(data)
         return data;
