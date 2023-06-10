@@ -7,7 +7,14 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 10vh 10vw;
+    margin: 0 10vw 10vh 10vw;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'SF Mono', monospace;
+    margin: 10vh 10vw 1vh 10vw;
 }
 
 
@@ -51,12 +58,19 @@ h3 {
 #result-section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-left: 5vw;
 }
 
 #jobs-section {
     display: flex;
     flex-direction: column;
+}
+
+#results-heading,
+#jobs-section {
+    opacity: 0;
 }
 
 .job {
@@ -69,7 +83,7 @@ h3 {
     background-color: rgb(206, 231, 253);
 }
 
-button {
+#getData {
     font-size: 1.5em;
     width: fit-content;
     background: rgb(181, 220, 255);

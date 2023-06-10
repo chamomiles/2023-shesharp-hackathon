@@ -119,27 +119,35 @@ document.querySelectorAll('.option').forEach(item => {
                     break;
             }
         }
+
+        if (filters.hours === 'Intern') {
+            document.querySelector('#senior').disabled = true
+            document.querySelector('#manager').disabled = true
+        }
     })
 })
 
 
 
-document.querySelector('button').addEventListener('click', showMeData);
+document.querySelector('#getData').addEventListener('click', showMeData);
 
 async function showMeData() {
     const API_KEY = prompt('Your API key:')
 
     const getData = async () => {
+
         const myHeaders = new Headers();
         myHeaders.append("x-api-key", API_KEY)
         myHeaders.append("Content-Type", "application/json");
 
         const raw = JSON.stringify({
+        "fields": "job_name,job_location,department,hours,remote,company_name,company_url,post_url,tags_matched,tag_categories,categories,seniority,language,city,country,updated_at",
+
         "filters": [
             
             {
                 "field": "hours",
-                "operator": "IS_IN",
+                "operator": "CONTAINS_ANY",
                 "value": [
                     filters.hours
                 ]
@@ -147,7 +155,7 @@ async function showMeData() {
 
             {
                 "field": "seniority",
-                "operator": "IS_IN",
+                "operator": "CONTAINS_ANY",
                 "value": [
                     filters.role
                 ]
@@ -155,7 +163,7 @@ async function showMeData() {
 
             {
                 "field": "remote",
-                "operator": "IS_IN",
+                "operator": "CONTAINS_ANY",
                 "value": [
                     filters.remote
                 ]
@@ -163,13 +171,13 @@ async function showMeData() {
 
             {
                 "field": "region",
-                "operator": "IS_IN",
+                "operator": "CONTAINS_ANY",
                 "value": filters.regions
             },
 
         ],
         "count_only": false,
-        "limit": 3
+        "limit": 2
         });
 
         const requestOptions = {
@@ -178,11 +186,16 @@ async function showMeData() {
             body: raw,
             redirect: 'follow'
         };
-
+        
         const response =  await fetch("https://148581a8-8e6e-4837-a77e-d8733cf62e83.mock.pstmn.io/jobs", requestOptions)
-
+        
         const data = await response.json();
+
+        document.querySelector('#jobs-section').style.opacity = 1
+        document.querySelector('#results-heading').style.opacity = 1
+
         return data;
+
     }
     
     const jsonData = await getData()
