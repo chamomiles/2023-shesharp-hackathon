@@ -18,49 +18,61 @@
 
         <main class="main">
 
-            <section id="hours-section">
-                <span class="hours-option" id="full-time">Full-Time</span>
-                <span class="hours-option" id="part-time">Part-Time</span>
-                <span class="hours-option" id="intern">Intern</span>
-                <span class="hours-option" id="contract">Contract</span>
+            <section id="form-section">
+                
+                <h3>Hours</h3>
+                <section class="options-section" id="hours-section">
+                    <span class="option hours-option" id="full-time">Full-Time</span>
+                    <span class="option hours-option" id="part-time">Part-Time</span>
+                    <span class="option hours-option" id="intern">Intern</span>
+                    <span class="option hours-option" id="contract">Contract</span>
+                </section>
+                
+                <h3>Roles</h3>
+                <section class="options-section" id="roles-section">
+                    <span class="option roles-option" id="junior">Junior</span>
+                    <span class="option roles-option" id="senior">Senior</span>
+                    <span class="option roles-option" id="manager">Manager</span>
+                </section>
+                
+                <h3>Remote</h3>
+                <section class="options-section" id="remote-section">
+                    <span class="option remote-option" id="remote">Remote</span>
+                    <span class="option remote-option" id="onsite">Onsite</span>
+                </section>
+                
+                <h3>Region</h3>
+                <section class="options-section" id="regions-section">
+                    <span class="option regions-option" id="drenthe">Drenthe</span>
+                    <span class="option regions-option" id="flevoland">Flevoland</span>
+                    <span class="option regions-option" id="friesland">Friesland</span>
+                    <span class="option regions-option" id="gelderland">Gelderland</span>
+                    <span class="option regions-option" id="groningen">Groningen</span>
+                    <span class="option regions-option" id="limburg">Limburg</span>
+                    <span class="option regions-option" id="north-brabant">North Brabant</span>
+                    <span class="option regions-option" id="north-holland">North Holland</span>
+                    <span class="option regions-option" id="overijssel">Overijssel</span>
+                    <span class="option regions-option" id="south-holland">South Holland</span>
+                    <span class="option regions-option" id="zeeland">Zeeland</span>
+                </section>
+                
             </section>
 
-            <section id="roles-section">
-                <span class="roles-option" id="junior">Junior</span>
-                <span class="roles-option" id="senior">Senior</span>
-                <span class="roles-option" id="manager">Manager</span>
-            </section>
+            <section id="result-section">
 
-            <section id="remote-section">
-                <span class="remote-option" id="remote">Remote</span>
-                <span class="remote-option" id="onsite">Onsite</span>
-            </section>
+                <button id="getData" class="btn">Get Jobs</button>
 
-            <section id="regions-section">
-                <span class="regions-option" id="drenthe">Drenthe</span>
-                <span class="regions-option" id="flevoland">Flevoland</span>
-                <span class="regions-option" id="friesland">Friesland</span>
-                <span class="regions-option" id="gelderland">Gelderland</span>
-                <span class="regions-option" id="groningen">Groningen</span>
-                <span class="regions-option" id="limburg">Limburg</span>
-                <span class="regions-option" id="north-brabant">North Brabant</span>
-                <span class="regions-option" id="north-holland">North Holland</span>
-                <span class="regions-option" id="overijssel">Overijssel</span>
-                <span class="regions-option" id="south-holland">South Holland</span>
-                <span class="regions-option" id="zeeland">Zeeland</span>
+                <h2>Your results:</h2>
+                <section id="jobs-section">
+                    <span class="output job" id="job-1">Job 1</span>
+                    <span class="output job" id="job-2">Job 2</span>
+                    <span class="output job" id="job-3">Job 3</span>
+                </section>
+
             </section>
 
         </main>
-        
-
-
-        
-        <!-- 
-            <button id="getData" class="btn">Click me!</button>
-            <div id="output" class="output">I turn into JSON data</div>
-            <div id="output2">Me too!</div> 
-        -->
             
-        <script src="js/main.js"></script>
-    </body>
-</html>
+            <script src="js/main.js"></script>
+        </body>
+        </html>
